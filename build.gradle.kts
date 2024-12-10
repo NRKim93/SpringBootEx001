@@ -19,9 +19,12 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	runtimeOnly ("com.h2database:h2")
+	runtimeOnly ("com.h2database:h2") // h2용 추가 설정
+	implementation ("org.springframework.boot:spring-boot-starter-data-jpa") // h2용 추가 설정
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	compileOnly ("org.projectlombok:lombok")
+	annotationProcessor ("org.projectlombok:lombok")
 
 }
 
